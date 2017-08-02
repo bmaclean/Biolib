@@ -1,6 +1,25 @@
-class AminoAcid:
+from enum import Enum
 
-    def __init__(self, name):
+
+class AminoAcid(Enum):
+
+    val = ("Valine")
+    val.set_abbrv("V")
+    val.set_structure("CC(C)[C@@H](C(=O)O)N")  # @@ indicated L-enantiomer
+    val.set_mol_mass(117.15)
+    val.set_iso_point(6.0)
+    val.set_spec_rotation(22.9)
+    val.set_melting_point(298.0)
+
+    tyr = ("Tyrosine")
+    tyr.set_abbrv("Y")
+    tyr.set_structure("C1=CC(=CC=C1C[C@@H](C(=O)O)N)O")
+    tyr.set_mol_mass(181.19)
+    tyr.set_iso_point(5.66)
+    tyr.set_spec_rotation(-10.6)
+    tyr.set_melting_point(343.0)
+
+    def __init__(self, name, abbrv, structure, mol_mass, iso_point, spec_rotation, melting_point):
         # IUPAC AA name
         self.name = name
         # 1-letter IUPAC code
@@ -39,6 +58,7 @@ class AminoAcid:
     def set_frequency(self, freq):
         self.freq = freq
 
+
 # Use AminoAcid class to define valine:
 val = AminoAcid("Valine")
 val.set_abbrv("V")
@@ -56,6 +76,5 @@ tyr.set_mol_mass(181.19)
 tyr.set_iso_point(5.66)
 tyr.set_spec_rotation(-10.6)
 tyr.set_melting_point(343.0)
-
 
 
