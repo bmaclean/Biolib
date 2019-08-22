@@ -1,5 +1,5 @@
 """
-    Fasta is a collection of functions for FASTA file format I/O. 
+    Fasta is a collection of functions for FASTA file format I/O.
 """
 
 def from_fasta(fasta_file):

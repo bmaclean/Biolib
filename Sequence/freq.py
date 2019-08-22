@@ -12,9 +12,10 @@ tyr_freq = partial(freq, component='Y')
 print(tyr_freq('TWWBCYCY')) # 0.25
 """
 
-def freq(component, seq=[]):
+def freq(component, seq):
+    """Returns the frequency of `component` in `sequence`."""
     count = 0
-    for a in seq:
-        if a is component:
+    for elem in seq:
+        if elem is component:
             count += 1
     return count / len(seq)
