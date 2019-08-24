@@ -4,11 +4,11 @@
 
 The fasta module is used for read/write operations involing fasta files.
 
-**`fasta.from_fasta(fasta_file)`**
+### `fasta.from_fasta(fasta_file)`
 
 `fasta_file` - the Fasta file to be parsed into a useable data structure.
 
-### Example
+#### Example
 
 To parse the file `cubilin.fasta`:
 
@@ -34,4 +34,4 @@ Returns a dict of the format:
 }
 ```
 
-**`fasta.to_fasta(source, target)`**
+### `fasta.to_fasta(source, target)`
