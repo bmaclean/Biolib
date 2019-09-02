@@ -11,8 +11,8 @@ def from_fasta(fasta_file):
             for line in file:
                 if line[0] == '>':
                     records.append(dict())
-                    records[record_index]['header'] = line.rstrip("\n\r")
-                    records[record_index - 1]['sequence'] = ''
+                    records[record_index]['header'] = line.rstrip("\n\r").lstrip(">")
+                    records[record_index]['sequence'] = ''
                     record_index += 1
                 else:
                     records[record_index - 1]['sequence'] += line.rstrip("\n\r")
