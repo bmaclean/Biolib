@@ -35,3 +35,7 @@ Returns a dict of the format:
 ```
 
 ### `fasta.to_fasta(source, target)`
+
+## TODO's
+
+- `.gb` or `.genbank`
