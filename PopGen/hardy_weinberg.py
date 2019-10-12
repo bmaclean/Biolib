@@ -10,14 +10,14 @@ def get_allele_freq(pp_freq=None, qq_freq=None):
         frequencies of alleles p and q.
     """
     if pp_freq is None and qq_freq is None:
-        raise Exception
+        raise AttributeError("Expected at least 1 frequency. Received 0.")
     elif pp_freq is not None and qq_freq is not None:
         # both phenotype frequencies provided
         return {
             'p': math.sqrt(pp_freq),
             'q': math.sqrt(qq_freq)
         }
-    if qq_freq is None:
+    elif qq_freq is None:
         # pp phenotype frequency provided
         return {
             'p': math.sqrt(pp_freq),
