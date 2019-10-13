@@ -30,6 +30,12 @@ def get_allele_freq(pp_freq=None, qq_freq=None):
             'q': math.sqrt(qq_freq)
         }
 
+def get_carrier_freq(freq):
+    """
+        Given either homozygous frequency, returns the heterozygous frequency.
+    """
+    return 2 * (math.sqrt(freq) * (1 - math.sqrt(freq)))
+
 def in_hwe(gen_1, gen_2):
     """
         Given the allele frequenceis of two generations 1 and 2, returns True if that
