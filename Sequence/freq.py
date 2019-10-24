@@ -1,5 +1,6 @@
 """
-`freq` provides the frequency of a given sequence element within the provided sequence.
+get_component_frequency provides the frequency of a given sequence element within
+the provided sequence.
 
 Would commonly be used to determine base pair frequency in nucleic acid sequences, or
 amino acid frequency in peptide sequences.

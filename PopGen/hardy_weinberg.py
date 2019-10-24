@@ -1,40 +1,41 @@
 """
-    hardy_weinberg contains functions for calculating if a population is in
-    Hardy-Weinberg equilibrium, and allele frequencies given phenotype frequency.
+    hardy_weinberg contains functions for modelling a population in
+    Hardy-Weinberg equilibrium and determining allele frequencies given
+    genotypic frequency.
 """
 import math
 
 def get_allele_freq(pp_freq=None, qq_freq=None):
     """
-        Receives the phenotypic frequency of either pp or qq, and returns the allele
+        Receives the genotypic frequency of either pp or qq, and returns the allele
         frequencies of alleles p and q.
     """
     if pp_freq is None and qq_freq is None:
         raise AttributeError("Expected at least 1 frequency. Received 0.")
     elif pp_freq is not None and qq_freq is not None:
-        # both phenotype frequencies provided
+        # both genotype frequencies provided
         return {
             'p': math.sqrt(pp_freq),
             'q': math.sqrt(qq_freq)
         }
     elif qq_freq is None:
-        # pp phenotype frequency provided
+        # pp genotype frequency provided
         return {
             'p': math.sqrt(pp_freq),
             'q': 1 - math.sqrt(pp_freq)
         }
     else:
-        # qq phenotype frequency provided
+        # qq genotype frequency provided
         return {
             'p': 1 - math.sqrt(qq_freq),
             'q': math.sqrt(qq_freq)
         }
 
-def get_carrier_freq(freq):
+def get_carrier_freq(f_homo):
     """
         Given either homozygous frequency, returns the heterozygous frequency.
     """
-    return 2 * (math.sqrt(freq) * (1 - math.sqrt(freq)))
+    return 2 * (math.sqrt(f_homo) * (1 - math.sqrt(f_homo)))
 
 def in_hwe(gen_1, gen_2):
     """
