@@ -2,7 +2,7 @@
 
 ## hardy_weinberg
 
-*`hardy_weinberg`* provides a set of utilities related to the Hardy-Weinberg model used to analyze whether a population is undergoing changes in allele frequencies. It current contains three functions to represent this model:
+*`hardy_weinberg`* provides a set of utilities related to the Hardy-Weinberg model used to analyze whether a population is undergoing changes in allele frequencies. It currently contains three functions for this model:
 
 #### *`get_allele_freq(pp, qq)`*
 
@@ -28,3 +28,12 @@ Given two allele frequencies from the same generation sampled at different times
 ## TODO's
 
 - Selection changes in allele frequencies
+- Generalization for 2+ alleles
+- Generalization for polyploidy
+- Complete generalization
+- Edge case of complete dominance
+- Sig tests, degrees of freedom
+- Fishers exact test
+- Inbreeding coefficient
+- Genetic drift; Fisher equation
+- 
